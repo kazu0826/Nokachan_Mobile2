@@ -22,7 +22,7 @@ public class DragMove : MonoBehaviour
 	private float touchistartposx;
 	private float touchipos;
 	public float touchitime;
-	private float timer;
+	public float timer;
 	private float pos;
 	public float touchidis;
 	public float touchPositiony;
@@ -41,15 +41,15 @@ public class DragMove : MonoBehaviour
 	
 	private void Update()
 	{
-	
-	}
-    private void FixedUpdate()
-    {
-	
-		if(stop)
-        {
+		if (stop)
+		{
+			anim.speed = 0;
 			return;
-        }
+		}
+		else
+		{
+			anim.speed = 1;
+		}
 		PlayerInput();
 
 		if (HP == 2)
@@ -67,6 +67,11 @@ public class DragMove : MonoBehaviour
 		timer -= Time.deltaTime;
 		timer2 -= Time.deltaTime;
 	}
+    private void FixedUpdate()
+    {
+	
+		
+	}
     private void PlayerInput()
 	{
 
@@ -75,16 +80,17 @@ public class DragMove : MonoBehaviour
 		if (Input.touchCount <= 0)
         {
 			touchi = false;
+			
 			timer = 0;
 			return;
         }
 
 		 touchPositiony = Input.GetTouch(0).position.y;
-		
-		
+
+		if (touchPositiony <= Screen.height / 8) return;
 	
 	
-		if(touchPositiony<=Screen.height*0.4)
+		if(touchPositiony<=Screen.height*0.45)
         {
 			touchistartposx = Input.GetTouch(0).position.x;
 
@@ -120,8 +126,8 @@ public class DragMove : MonoBehaviour
 			}
 			tap();
         }
-		touchi = false;
-		timer = 0;
+		
+	
 
 
 
@@ -170,9 +176,9 @@ public class DragMove : MonoBehaviour
 	}
 	private void slide()
     {
-
+		Debug.Log(Input.GetTouch(0).phase);
 		if (Input.GetTouch(0).phase != TouchPhase.Ended || timer < 0) return;
-	
+		
 		if (touchistartposx <= Screen.width / 2)
 		{
 			tm2.text = string.Format("ˆÚ“®‘¬“x: {0}", Input.GetTouch(0).position.y);
