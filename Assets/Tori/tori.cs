@@ -12,6 +12,7 @@ public class tori : MonoBehaviour
 
    public Redpepper red;
    public DragMove dm;
+    public GameObject button;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,7 @@ public class tori : MonoBehaviour
     {
         red.stop = false;
         dm.stop = false;
+        button.SetActive(true);
         this.gameObject.SetActive(false);
     }
 }

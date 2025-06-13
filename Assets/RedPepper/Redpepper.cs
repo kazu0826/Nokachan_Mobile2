@@ -53,11 +53,11 @@ public class Redpepper : MonoBehaviour
         }
         else if (HP <= 69 && HP >= 40)
         {
-            anim.speed = 1.5f;
+            anim.speed = 1.4f;
         }
         else if (HP <= 39 && HP >= 0)
         {
-            anim.speed = 1.5f;
+            anim.speed = 1.7f;
         }
         else
         {

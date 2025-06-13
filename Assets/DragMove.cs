@@ -90,7 +90,7 @@ public class DragMove : MonoBehaviour
 		if (touchPositiony <= Screen.height / 8) return;
 	
 	
-		if(touchPositiony<=Screen.height*0.45)
+		if(touchPositiony<=Screen.height*0)
         {
 			touchistartposx = Input.GetTouch(0).position.x;
 
