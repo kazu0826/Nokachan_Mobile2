@@ -13,7 +13,12 @@ public class PoseMenu : MonoBehaviour
     public GameObject obj;
     public Redpepper red;
     public DragMove noka;
-    
+    public AudioSource au;
+    private float time;
+    public AudioSource sound;
+    public AudioClip ac1;
+    public AudioClip ac2;
+    public AudioClip ac3;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +32,7 @@ public class PoseMenu : MonoBehaviour
     }
     public void yarinaosu()
     {
+        sound.PlayOneShot(ac3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void owaru()
@@ -42,9 +48,14 @@ public class PoseMenu : MonoBehaviour
             pose = false;
             red.stop = false;
             noka.stop = false;
+            au.volume = time;
+            sound.PlayOneShot(ac2);
         }
         else
         {
+            sound.PlayOneShot(ac1);
+            time = au.volume;
+            au.volume = time-0.3f;
             obj.SetActive(true);
             pose = true;
             img.sprite = sp;

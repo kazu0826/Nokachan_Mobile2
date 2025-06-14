@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 414062628}
   - component: {fileID: 414062627}
   - component: {fileID: 414062630}
+  - component: {fileID: 414062631}
   m_Layer: 5
   m_Name: yarinaosu
   m_TagString: Untagged
@@ -465,6 +466,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 414062631}
+        m_TargetAssemblyTypeName: Soundplayer, Assembly-CSharp
+        m_MethodName: play1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 414062630}
         m_TargetAssemblyTypeName: PoseMenu, Assembly-CSharp
         m_MethodName: yarinaosu
@@ -534,6 +547,30 @@ MonoBehaviour:
   obj: {fileID: 0}
   red: {fileID: 0}
   noka: {fileID: 0}
+  au: {fileID: 0}
+  sound: {fileID: 303195535}
+  ac1: {fileID: 0}
+  ac2: {fileID: 0}
+  ac3: {fileID: 8300000, guid: 0a529241e568baf4d847a53458f177e3, type: 3}
+--- !u!114 &414062631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414062625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf754013bcd592459ca92eacc1ebfd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  au: {fileID: 303195535}
+  ac1: {fileID: 8300000, guid: 0a529241e568baf4d847a53458f177e3, type: 3}
+  ac2: {fileID: 0}
+  ac3: {fileID: 0}
+  ac4: {fileID: 0}
+  ac5: {fileID: 0}
+  ac6: {fileID: 0}
 --- !u!1 &455726254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,6 +1547,11 @@ MonoBehaviour:
   obj: {fileID: 975011169}
   red: {fileID: 1118012648}
   noka: {fileID: 1401086894}
+  au: {fileID: 966202655}
+  sound: {fileID: 303195535}
+  ac1: {fileID: 8300000, guid: f9798e1f8d5a283449d8665a5f121e96, type: 3}
+  ac2: {fileID: 8300000, guid: 4f161ede6b2264140a412cb021218cd3, type: 3}
+  ac3: {fileID: 0}
 --- !u!1 &1118012643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,8 +1736,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   au: {fileID: 303195535}
   ac1: {fileID: 8300000, guid: 36c0cf973a8e18941b00386e76b26c13, type: 3}
-  ac2: {fileID: 0}
-  ac3: {fileID: 0}
+  ac2: {fileID: 8300000, guid: 75da3540cee66814c92c4767f0ba3b6b, type: 3}
+  ac3: {fileID: 8300000, guid: 1a9c94388fa98074bb553f165ba75bf2, type: 3}
   ac4: {fileID: 0}
   ac5: {fileID: 0}
   ac6: {fileID: 0}
@@ -1880,6 +1922,7 @@ GameObject:
   - component: {fileID: 1379126081}
   - component: {fileID: 1379126080}
   - component: {fileID: 1379126083}
+  - component: {fileID: 1379126084}
   m_Layer: 5
   m_Name: owaru
   m_TagString: Untagged
@@ -1963,6 +2006,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1379126084}
+        m_TargetAssemblyTypeName: Soundplayer, Assembly-CSharp
+        m_MethodName: play1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1379126081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2018,6 +2073,25 @@ MonoBehaviour:
   time: 0.8
   panel: {fileID: 648243244}
   au: {fileID: 966202655}
+--- !u!114 &1379126084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379126078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf754013bcd592459ca92eacc1ebfd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  au: {fileID: 303195535}
+  ac1: {fileID: 8300000, guid: 0a529241e568baf4d847a53458f177e3, type: 3}
+  ac2: {fileID: 0}
+  ac3: {fileID: 0}
+  ac4: {fileID: 0}
+  ac5: {fileID: 0}
+  ac6: {fileID: 0}
 --- !u!1 &1401086891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,9 +2295,9 @@ MonoBehaviour:
   ac1: {fileID: 8300000, guid: 75da3540cee66814c92c4767f0ba3b6b, type: 3}
   ac2: {fileID: 8300000, guid: ae07451007a1761478a9ca3821a02d4a, type: 3}
   ac3: {fileID: 8300000, guid: 11f04a9bb19247442add91edb7ce4e35, type: 3}
-  ac4: {fileID: 0}
-  ac5: {fileID: 0}
-  ac6: {fileID: 0}
+  ac4: {fileID: 8300000, guid: 8658e0918c97b53439e4bf637082632c, type: 3}
+  ac5: {fileID: 8300000, guid: 36c0cf973a8e18941b00386e76b26c13, type: 3}
+  ac6: {fileID: 8300000, guid: 3a17642311537904db755e578e2411d1, type: 3}
 --- !u!1 &1409956214
 GameObject:
   m_ObjectHideFlags: 0
