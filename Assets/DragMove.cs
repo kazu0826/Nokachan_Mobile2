@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DragMove : MonoBehaviour
 {
@@ -38,9 +39,15 @@ public class DragMove : MonoBehaviour
 	public Sprite UI1;
 	public Sprite UI0;
 	public bool stop = false;
+	public PoseMenu pose;
+	public Button button;
+	public bool youwin;
+	public AudioSource au;
+	public float pichi;
 	
-	private void Update()
+    private void Update()
 	{
+		if (youwin) return;
 		if (stop)
 		{
 			anim.speed = 0;
@@ -50,6 +57,7 @@ public class DragMove : MonoBehaviour
 		{
 			anim.speed = 1;
 		}
+		
 		PlayerInput();
 
 		if (HP == 2)
@@ -62,7 +70,9 @@ public class DragMove : MonoBehaviour
 		}
 		else if (HP == 0)
 		{
+			au.pitch = pichi;
 			HPUI.sprite = UI0;
+			button.interactable = false;
 		}
 		timer -= Time.deltaTime;
 		timer2 -= Time.deltaTime;
@@ -208,11 +218,16 @@ public class DragMove : MonoBehaviour
 		
 		if(HP<=0)
         {
+			
 			anim.Play(KnockOutst);
 		}
 		else
         {
 			anim.Play(damagest);
 		}
+    }
+	public void Pose()
+    {
+		pose.YouLose();
     }
 }

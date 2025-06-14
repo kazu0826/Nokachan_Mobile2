@@ -13,6 +13,7 @@ public class PoseMenu : MonoBehaviour
     public GameObject obj;
     public Redpepper red;
     public DragMove noka;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -52,9 +53,14 @@ public class PoseMenu : MonoBehaviour
         }
   
     }
-    public void Close()
+    public void YouLose()
     {
 
+        obj.SetActive(true);
+        pose = true;
         
+        red.stop = true;
+        noka.stop = true;
     }
+
 }

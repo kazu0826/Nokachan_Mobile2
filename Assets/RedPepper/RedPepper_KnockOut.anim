@@ -90,7 +90,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5833333
+    m_StopTime: 1.1666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -203,6 +203,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0
     functionName: shake
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1666666
+    functionName: tori1
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -9,6 +9,7 @@ public class Seanidou : MonoBehaviour
     public bool idou = false;
     public float time;
     public GameObject panel;
+    public AudioSource au;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class Seanidou : MonoBehaviour
         {
             panel.SetActive(true);
         }
+        if (au != null) au.volume = 0;
         idou = true;
     }
 

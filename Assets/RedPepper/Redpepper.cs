@@ -32,9 +32,17 @@ public class Redpepper : MonoBehaviour
     public string KnockOutst;
     public bool stop;
     public ShakeableTransform st;
+    public Button button;
+    public GameObject tori;
+    public Animator torianim;
+    public string torianimst;
+    public AudioSource au;
+    public AudioClip ac;
+    public float cleartime;
     // Start is called before the first frame update
     void Start()
     {
+        cleartime = 0;
         timer = Attack1Time;
         AttackTime2 = Attack1Time;
     }
@@ -64,6 +72,17 @@ public class Redpepper : MonoBehaviour
             anim.speed = 1;
         }
 
+        if(HP<=0)
+        {
+            GameManeger.HP = noka.HP;
+            GameManeger.Time = cleartime;
+            noka.youwin = true;
+            button.interactable = false;
+        }
+        else
+        {
+            cleartime+= Time.deltaTime;
+        }
         if(anim.GetCurrentAnimatorStateInfo(0).IsName(Standst))
         {
             timer -= Time.deltaTime;
@@ -150,6 +169,12 @@ public class Redpepper : MonoBehaviour
             DamageAnim();
             ComboCounter += 1;
         }
+      if(HP<=0)
+        {
+            au.Stop();
+            au.clip=ac;
+            au.Play();
+        }
     }
     private void DamageAnim()
     {
@@ -167,5 +192,13 @@ public class Redpepper : MonoBehaviour
     public void shake()
     {
         st.InduceStress(1);
+    }
+    public void tori1()
+    {
+        
+        
+        button.gameObject.SetActive(false);
+        tori.SetActive(true);
+        torianim.Play(torianimst);
     }
 }
