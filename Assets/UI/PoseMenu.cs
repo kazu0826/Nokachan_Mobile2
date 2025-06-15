@@ -19,6 +19,8 @@ public class PoseMenu : MonoBehaviour
     public AudioClip ac1;
     public AudioClip ac2;
     public AudioClip ac3;
+    public bool youloose;
+    public Button button;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,8 @@ public class PoseMenu : MonoBehaviour
     }
     public void Pose()
     {
-        if(pose)
+        if (youloose) return;
+        if (pose)
         {
             img.sprite = sp2;
             obj.SetActive(false);
@@ -66,12 +69,13 @@ public class PoseMenu : MonoBehaviour
     }
     public void YouLose()
     {
-
+        if (youloose) return;
         obj.SetActive(true);
         pose = true;
-        
+       
         red.stop = true;
         noka.stop = true;
+        youloose = true;
     }
 
 }
