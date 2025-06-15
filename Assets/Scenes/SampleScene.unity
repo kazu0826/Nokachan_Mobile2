@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 414062627}
   - component: {fileID: 414062630}
   - component: {fileID: 414062631}
+  - component: {fileID: 414062632}
   m_Layer: 5
   m_Name: yarinaosu
   m_TagString: Untagged
@@ -465,31 +466,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 414062628}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 414062631}
-        m_TargetAssemblyTypeName: Soundplayer, Assembly-CSharp
-        m_MethodName: play1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 414062630}
-        m_TargetAssemblyTypeName: PoseMenu, Assembly-CSharp
-        m_MethodName: yarinaosu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &414062628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +548,47 @@ MonoBehaviour:
   ac4: {fileID: 0}
   ac5: {fileID: 0}
   ac6: {fileID: 0}
+--- !u!114 &414062632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414062625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 414062631}
+          m_TargetAssemblyTypeName: Soundplayer, Assembly-CSharp
+          m_MethodName: play1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 414062630}
+          m_TargetAssemblyTypeName: PoseMenu, Assembly-CSharp
+          m_MethodName: yarinaosu
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &455726254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1425,7 @@ GameObject:
   - component: {fileID: 1087022768}
   - component: {fileID: 1087022767}
   - component: {fileID: 1087022770}
+  - component: {fileID: 1087022771}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1477,19 +1496,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1087022768}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1087022770}
-        m_TargetAssemblyTypeName: PoseMenu, Assembly-CSharp
-        m_MethodName: Pose
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1087022768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,6 +1559,35 @@ MonoBehaviour:
   ac1: {fileID: 8300000, guid: f9798e1f8d5a283449d8665a5f121e96, type: 3}
   ac2: {fileID: 8300000, guid: 4f161ede6b2264140a412cb021218cd3, type: 3}
   ac3: {fileID: 0}
+--- !u!114 &1087022771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087022765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1087022770}
+          m_TargetAssemblyTypeName: PoseMenu, Assembly-CSharp
+          m_MethodName: Pose
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1118012643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,6 +1959,7 @@ GameObject:
   - component: {fileID: 1379126080}
   - component: {fileID: 1379126083}
   - component: {fileID: 1379126084}
+  - component: {fileID: 1379126085}
   m_Layer: 5
   m_Name: owaru
   m_TagString: Untagged
@@ -1993,31 +2030,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1379126081}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1379126083}
-        m_TargetAssemblyTypeName: Seanidou, Assembly-CSharp
-        m_MethodName: seanidou
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1379126084}
-        m_TargetAssemblyTypeName: Soundplayer, Assembly-CSharp
-        m_MethodName: play1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1379126081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,6 +2105,47 @@ MonoBehaviour:
   ac4: {fileID: 0}
   ac5: {fileID: 0}
   ac6: {fileID: 0}
+--- !u!114 &1379126085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379126078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1379126083}
+          m_TargetAssemblyTypeName: Seanidou, Assembly-CSharp
+          m_MethodName: seanidou
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1379126084}
+          m_TargetAssemblyTypeName: Soundplayer, Assembly-CSharp
+          m_MethodName: play1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1401086891
 GameObject:
   m_ObjectHideFlags: 0
