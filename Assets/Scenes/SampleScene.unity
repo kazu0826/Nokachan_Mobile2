@@ -1774,7 +1774,7 @@ MonoBehaviour:
   ac1: {fileID: 8300000, guid: 36c0cf973a8e18941b00386e76b26c13, type: 3}
   ac2: {fileID: 8300000, guid: 75da3540cee66814c92c4767f0ba3b6b, type: 3}
   ac3: {fileID: 8300000, guid: 1a9c94388fa98074bb553f165ba75bf2, type: 3}
-  ac4: {fileID: 0}
+  ac4: {fileID: 8300000, guid: 0218697d9d2b2354baf51eded7ac7fd9, type: 3}
   ac5: {fileID: 0}
   ac6: {fileID: 0}
 --- !u!1 &1170199659
@@ -2263,6 +2263,7 @@ MonoBehaviour:
   damagest: Nokachan_Damage
   hanten: 0
   touchi: 0
+  touchistartposx: 0
   touchitime: 0.2
   timer: 0
   touchidis: 2
@@ -2284,6 +2285,8 @@ MonoBehaviour:
   youwin: 0
   au: {fileID: 966202655}
   pichi: 0.6
+  onattack: 0
+  dis: 0
 --- !u!95 &1401086895
 Animator:
   serializedVersion: 4

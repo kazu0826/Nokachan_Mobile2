@@ -20,8 +20,8 @@ public class DragMove : MonoBehaviour
 	public string damagest;
 	public bool hanten=false;
 	public bool touchi = false;
-	private float touchistartposx;
-	private float touchipos;
+	public float touchistartposx;
+	private float touchiposx;
 	public float touchitime;
 	public float timer;
 	private float pos;
@@ -44,7 +44,8 @@ public class DragMove : MonoBehaviour
 	public bool youwin;
 	public AudioSource au;
 	public float pichi;
-	
+	public bool onattack;
+	public float dis;
     private void Update()
 	{
 		if (youwin) return;
@@ -84,18 +85,18 @@ public class DragMove : MonoBehaviour
 	}
     private void PlayerInput()
 	{
-
+		
 		if (onDamage) return;
 		//もし入力がなかったらreturnする
 		if (Input.touchCount <= 0)
         {
 			touchi = false;
-			
+			onattack = false;
 			timer = 0;
 			return;
         }
-
-		 touchPositiony = Input.GetTouch(0).position.y;
+		if (onattack) return;
+		touchPositiony = Input.GetTouch(0).position.y;
 
 		if (touchPositiony <= Screen.height / 8) return;
 	
@@ -121,10 +122,11 @@ public class DragMove : MonoBehaviour
 		}
 		else
         {
-			touchistartposx = Input.GetTouch(0).position.x;
+			
+			touchiposx = Input.GetTouch(0).position.x;
 			if (!touchi)
 			{
-
+				touchistartposx = Input.GetTouch(0).position.x;
 				if (tm != null)
 				{
 					tm.text = string.Format("移動速度: {0}", Input.GetTouch(0).position);
@@ -148,21 +150,23 @@ public class DragMove : MonoBehaviour
 	private void tap()
     {
 		
-		if (Input.GetTouch(0).phase != TouchPhase.Ended || timer < 0) return;
-
-		if (touchistartposx <= Screen.width *0.2)
+		if (Input.GetTouch(0).phase != TouchPhase.Ended && timer > 0 || Input.GetTouch(0).phase == TouchPhase.Moved && timer > 0) return;
+		dis = touchistartposx - touchiposx;
+		Debug.Log(dis);
+		if (touchiposx <= Screen.width *0.3||dis>=30)
 		{
 			tm2.text = string.Format("移動速度: {0}", Input.GetTouch(0).position.y);
 			if (tapNG) return;
 			anim.Play(leftst);
-
+			onattack = true;
 		}
-		else if (touchistartposx >= Screen.width *0.8)
+		else if (touchiposx >= Screen.width *0.7||dis<=-30)
 		{
 			tm2.text = string.Format("移動速度: {0}", Input.GetTouch(0).position.y);
 			if (tapNG) return;
 
 			anim.Play(rightst);
+			onattack = true;
 		}
 		else
         {
@@ -172,13 +176,14 @@ public class DragMove : MonoBehaviour
 				anim.Play(attackst2);
 				red.Damage(twoPower);
 				timer2 = 0;
-
+				onattack = true;
 			}
 			else
             {
 				red.Damage(onePower);
 				anim.Play(attackst);
 				timer2 = onetwotime;
+				onattack = true;
 			}
 
 		}
@@ -186,17 +191,17 @@ public class DragMove : MonoBehaviour
 	}
 	private void slide()
     {
-		Debug.Log(Input.GetTouch(0).phase);
+	
 		if (Input.GetTouch(0).phase != TouchPhase.Ended || timer < 0) return;
 		
-		if (touchistartposx <= Screen.width / 2)
+		if (touchiposx <= Screen.width / 2)
 		{
 			tm2.text = string.Format("移動速度: {0}", Input.GetTouch(0).position.y);
 			if (tapNG) return;
 			anim.Play(leftst);
 
 		}
-		else if (touchistartposx >= Screen.width / 2)
+		else if (touchiposx >= Screen.width / 2)
 		{
 			tm2.text = string.Format("移動速度: {0}", Input.GetTouch(0).position.y);
 			if (tapNG) return;
