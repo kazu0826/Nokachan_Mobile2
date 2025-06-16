@@ -153,14 +153,14 @@ public class DragMove : MonoBehaviour
 		if (Input.GetTouch(0).phase != TouchPhase.Ended && timer > 0 || Input.GetTouch(0).phase == TouchPhase.Moved && timer > 0) return;
 		dis = touchistartposx - touchiposx;
 		Debug.Log(dis);
-		if (touchiposx <= Screen.width *0.3||dis>=30)
+		if (touchiposx <= Screen.width *0.3||dis>=20)
 		{
 			tm2.text = string.Format("ˆÚ“®‘¬“x: {0}", Input.GetTouch(0).position.y);
 			if (tapNG) return;
 			anim.Play(leftst);
 			onattack = true;
 		}
-		else if (touchiposx >= Screen.width *0.7||dis<=-30)
+		else if (touchiposx >= Screen.width *0.7||dis<=-20)
 		{
 			tm2.text = string.Format("ˆÚ“®‘¬“x: {0}", Input.GetTouch(0).position.y);
 			if (tapNG) return;
